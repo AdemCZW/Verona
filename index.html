@@ -16,6 +16,7 @@
     <!-- JavaScript Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
     <script src="js/wow.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lazyload@2.0.0-rc.2/lazyload.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     
     <script>
@@ -48,7 +49,15 @@
     </script>
      </script>
     
-  
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-MMGGLB');</script>
+    <!-- End Google Tag Manager -->
+
+
     <!-- ※LP用|編集削除禁止 -->
     <link href="https://www.ozioproduct04.com/VCommonFiles/css/app.css" rel=stylesheet>
     <!-- ※LP用|編集削除禁止※ -->
@@ -59,7 +68,11 @@
 
 
 <body>
-    
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MMGGLB"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
     <div class="loading-all">
         <div id="splash_logo">
             <img src="img/logo.png" alt="" class="fadeUp">
@@ -219,7 +232,7 @@
             <div class="content">
                 <img src="img/OZIO_EX_LP01-02_05.png">
                 <div class="line_btn999">
-                    <img src="img/skincare.gif" alt="">
+                    <img class="lazyload" data-src="img/skincare.gif" width="100%" height="" src="img/skincare.gif" alt="">
                 </div>
             </div>
         </div>
@@ -280,10 +293,10 @@
             <div class="content">
                 <img src="img/OZIO_EX_LP01-03_04.png">
                 <div class="line_btn24">
-                    <img src="img/texture01.gif" alt="">
+                    <img class="lazyload" data-src="img/texture01.gif" width="100%" height="" src="img/texture01.gif" alt="">
                 </div>
                 <div class="line_btn25">
-                    <img src="img/texture02.gif" alt="">
+                    <img class="lazyload" data-src="img/texture02.gif" width="100%" height="" src="img/texture02.gif" alt="">
                 </div>
             </div>
         </div>
@@ -408,7 +421,10 @@
             </div>
         </a>
     </div>-->
-    
+    <!-- ※LP用|編集削除禁止 -->
+    <div id="acs_lp_form"></div>
+    <script src="https://www.ozioproduct04.com/VCommonFiles/app.min.js"></script>
+    <!-- ※LP用|編集削除禁止 -->
 </body>
 
 
