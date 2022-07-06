@@ -47,18 +47,22 @@ button,
 
 .fadeUp {
     animation-name: fadeUpAnime;
-    animation-duration: 0.6s;
+    animation-duration: 2s;
     animation-fill-mode: forwards;
     opacity: 0;
 }
 
 @keyframes fadeUpAnime {
-    from {
-        opacity: 0;
-        transform: translateY(100px);
-    }
-    to {
+    0% {
         opacity: 1;
+        transform: translateY(0);
+    }
+    50% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    100% {
+        opacity: 0;
         transform: translateY(0);
     }
 }
@@ -133,7 +137,7 @@ nav {
   background-color: #EBC65F;
   z-index: 99999000;
   position: fixed;
-  top: 0%;
+ 
 }
 /*漢堡選單*/
 
