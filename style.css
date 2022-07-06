@@ -1,0 +1,1338 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none !important;
+}
+
+body {
+    font-family:'微軟正黑體';
+}
+
+
+/* Loading背景畫面設定 */
+button,
+[type=button],
+[type=reset],
+[type=submit] {
+  -webkit-appearance: none !important;
+}
+
+#splash {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+    /* background: linear-gradient(45deg, #4448b7, #6acefc, #2074b3); */
+    background: #EBC65F;
+    text-align: center;
+    color: #fff;
+    top: 0;
+    left: 0;
+}
+
+#splash_logo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 40%;
+}
+
+#splash_logo img {
+    width: 100%;
+}
+
+.fadeUp {
+    animation-name: fadeUpAnime;
+    animation-duration: 0.6s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+
+@keyframes fadeUpAnime {
+    from {
+        opacity: 0;
+        transform: translateY(100px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+nav {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #EBC65F;
+    z-index: 99;
+    display: flex;
+    justify-content: center;
+}
+
+.nav_list {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 60px;
+    line-height: 60px;
+    margin-right: 0rem;
+    /* width: 60%; */
+}
+
+.nav_item {
+    height: 30px;
+    line-height: 30px;
+    padding: 7px 1rem;
+    font-size: 1.3rem;
+    list-style: none;
+    color: #fff;
+}
+
+.second {
+    
+}
+
+.logo_box {
+    width: 377px;
+    display: flex;
+    align-items: center;
+    margin-left: 1%;
+}
+
+.logo {
+    width: 80%;
+}
+
+.video-container {
+    position: relative;
+    padding-bottom: 40.25%;
+    padding-top: 30px;
+    height: 0;
+    overflow: hidden;
+}
+
+.video-container iframe, .video-container object, .video-container embed {
+    position: absolute;
+    top: 0;left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+
+/*漢堡選單*/
+
+#hamburger {
+    z-index: 99;
+    display: none;
+}
+
+header {
+    box-sizing: border-box;
+    width: 100%;
+    height: 60px;
+    line-height: 60px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding-left: 3%;
+    padding-top: 5px;
+    z-index: 99;
+    background: #fff;
+    background: #EBC65F;
+    display: flex;
+}
+
+header .nav_logo {
+    margin: 6px 0 0 20px;
+}
+
+.logo_box--mb {
+    width: 86%;
+    display: flex;
+    align-items: center;
+}
+
+.logo_mb {
+    width: 50%;
+}
+
+#nav-icon {
+    width: 30px;
+    height: 30px;
+    position: relative;
+    /* float: left; */
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transition: .5s ease-in-out;
+    -moz-transition: .5s ease-in-out;
+    -o-transition: .5s ease-in-out;
+    transition: .5s ease-in-out;
+    cursor: pointer;
+}
+
+#icon_bg {
+    height: 50px;
+    width: 50px;
+    border-radius: 100%;
+}
+
+#nav-icon span {
+    margin-left: 10px;
+    margin-top: 14px;
+    display: block;
+    position: absolute;
+    height: 4px;
+    width: 100%;
+    background-color: #fff;
+    border-radius: 10px;
+    opacity: 1;
+    left: 0;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transition: .25s ease-in-out;
+    -moz-transition: .25s ease-in-out;
+    -o-transition: .25s ease-in-out;
+    transition: .25s ease-in-out;
+}
+
+#nav_bg.at {
+    background-color: #fff;
+}
+
+#nav-icon span:nth-child(1) {
+    top: 0px;
+    -webkit-transform-origin: left center;
+    -moz-transform-origin: left center;
+    -o-transform-origin: left center;
+    transform-origin: left center;
+}
+
+#nav-icon span:nth-child(2) {
+    top: 10px;
+    -webkit-transform-origin: left center;
+    -moz-transform-origin: left center;
+    -o-transform-origin: left center;
+    transform-origin: left center;
+}
+
+#nav-icon span:nth-child(3) {
+    top: 20px;
+    -webkit-transform-origin: left center;
+    -moz-transform-origin: left center;
+    -o-transform-origin: left center;
+    transform-origin: left center;
+}
+
+#nav-icon.open span:nth-child(1) {
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+    top: 0px;
+    left: 4px;
+    background-color: #ffb330;
+}
+
+#nav-icon.open span:nth-child(2) {
+    width: 0%;
+    opacity: 0;
+}
+
+#nav-icon.open span:nth-child(3) {
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    top: 21px;
+    left: 4px;
+    background-color: #ffb330;
+}
+
+.menu {
+    z-index: 1000;
+    font-size: 20px;
+    width: 100%;
+    background-color: #EBC65F;
+    position: fixed;
+    text-align: center;
+    display: none;
+}
+
+.menu ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    list-style-image: none;
+}
+
+.menu ul li {
+    padding: 15px 0;
+    border-top: #ffffff 1px dashed;
+}
+
+.menu ul li a {
+    color: white;
+    text-decoration: none;
+    transition: .3s;
+    -o-transition: .3s;
+    -moz-transition: .3s;
+    -webkit-transition: .3s;
+}
+
+.menu ul li a:hover {
+    font-size: 1.2em;
+    transition: .3s;
+    -o-transition: .3s;
+    -moz-transition: .3s;
+    -webkit-transition: .3s;
+    /* color: #ffb330; */
+}
+
+
+/*# sourceMappingURL=style.css.map */
+
+.LP {
+    max-width: 1920px;
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 60px;
+}
+
+img {
+    display: block;
+    width: 100%;
+}
+
+.content {
+    max-width: 1000px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.bg {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.bg1-1 {
+    background-image: url(img/OZIO_EX_LP01-01_01.jpg);
+}
+
+.bg1-2 {
+    background-image: url(img/OZIO_EX_LP01-01_02.jpg);
+}
+
+.bg1-3 {
+    background-image: url(img/OZIO_EX_LP01-01_03.jpg);
+}
+
+.bg1-4 {
+    background-image: url(img/OZIO_EX_LP01-01_04.jpg);
+}
+
+.bg2-1 {
+    background-image: url(img/OZIO_EX_LP01-01_05.jpg);
+}
+
+.bg2-2 {
+    background-image: url(img/OZIO_EX_LP01-01_06.jpg);
+}
+
+.bg2-3 {
+    background-image: url(img/OZIO_EX_LP01-02_01.jpg);
+}
+
+.bg2-4 {
+    background-image: url(img/offerA/OZIO_EX_LP01-offerA_01.jpg);
+}
+
+.bg2-5 {
+    background-image: url(img/OZIO_EX_LP01-02_03.jpg);
+}
+
+.bg3-1 {
+    background-image: url(img/OZIO_EX_LP01-02_04.jpg);
+}
+
+.bg3-2 {
+    background-image: url(img/OZIO_EX_LP01-02_05.jpg);
+}
+
+.bg3-3 {
+    background-image: url(img/OZIO_EX_LP01-03_01.jpg);
+}
+
+.bg3-4 {
+    background-image: url(img/OZIO_EX_LP01-03_02.jpg);
+}
+
+.bg4-1 {
+    background-image: url(img/OZIO_EX_LP01-03_03.jpg);
+}
+
+.bg4-2 {
+    background-image: url(img/OZIO_EX_LP01-03_04.jpg);
+}
+
+.bg4-3 {
+    background-image: url(img/OZIO_EX_LP01-04_01.jpg);
+}
+
+.bg4-4 {
+    background-image: url(img/OZIO_EX_LP01-04_02.jpg);
+}
+
+.bg4-5 {
+    background-image: url(img/OZIO_EX_LP01-04_03.jpg);
+}
+
+.bg4-6 {
+    background-image: url(img/OZIO_EX_LP01-04_04.jpg);
+}
+
+.bg4-7 {
+    background-image: url(img/OZIO_EX_LP01-04_05.jpg);
+}
+
+.bg4-8 {
+    background-image: url(img/offerA/OZIO_EX_LP01-offerA_05.jpg);
+}
+
+.offer1 {
+    background-image: url(img/offerA/OZIO_EX_LP01-offerA_02.jpg);
+}
+
+.offer2 {
+    background-image: url(img/offerA/OZIO_EX_LP01-offerA_03.jpg);
+}
+
+.offer3 {
+    background-image: url(img/offerA/OZIO_EX_LP01-offerA_04.jpg);
+}
+
+.offer4 {
+    background-image: url(img/OZIO_EX_LP01-01_01_04.jpg);
+}
+
+.offer5 {
+    background-image: url(img/OZIO_EX_LP01-01_01_05.jpg);
+}
+
+.offer6 {
+    background-image: url(img/OZIO_EX_LP01-01_01_06.jpg);
+}
+
+.offer7 {
+    background-image: url(img/OZIO_EX_LP01-01_01_07.jpg);
+}
+
+.btn {
+    position: absolute;
+}
+
+.btn1-4 {
+    bottom: 4%;
+    width: 95%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.btn2-3 {
+    width: 60%;
+    top: 15%;
+    left: 23%;
+}
+
+.btn2-4-1 {
+    width: 45%;
+    top: 1.5%;
+    right: 20%;
+}
+
+.btn2-4-2 {
+    width: 44%;
+    top: 19%;
+    right: 12%;
+    animation-delay: 0.5s;
+}
+
+.btn2-4-3 {
+    width: 45%;
+    top: 36.5%;
+    right: 3%;
+    animation-delay: 1s;
+}
+
+.btn2-5-1 {
+    width: 40%;
+    top: 29%;
+    left: 0%;
+}
+
+.btn2-5-2 {
+    width: 40%;
+    top: 34%;
+    right: 0%;
+    animation-delay: 0.5s;
+}
+
+.offer_btn2 {
+    width: 84%;
+    bottom: 5%;
+    left: 8%;
+}
+
+.line_box03 {
+    position: absolute;
+    bottom: 31%;
+    width: 54%;
+    left: 6%;
+}
+
+.line_btn04 {
+    position: absolute;
+    top: 29%;
+    width: 75%;
+    left: 14%;
+}
+.line_btn05 {
+    position: absolute;
+    top: 28%;
+    left: 6%;
+    width: 90%;
+}
+.line_btn06 {
+    position: absolute;
+    bottom: 70%;
+    left: 0%;
+    width: 37%;
+}
+.line_btn07 {
+    position: absolute;
+    bottom: 54%;
+    left: 31%;
+    width: 37%;
+}
+.line_btn08 {
+    position: absolute;
+    bottom: 70%;
+    left: 61%;
+    width: 37%;
+}
+.line_btn08_1 {
+    position: absolute;
+    bottom: 59%;
+    margin-left: 31%;
+    width: 64.5%;
+    z-index: 9;
+}
+.line_btn09 {
+    position: absolute;
+    top: 35%;
+    left: 0%;
+    width: 100%;
+    -webkit-animation: downtoup-play 2.5s infinite alternate;
+    animation: downtoup-play 2.5s infinite alternate;
+}
+
+.uptodown-play { -webkit-animation:uptodown-play 2s infinite alternate;
+                         animation:uptodown-play 2s infinite alternate;}
+    @-webkit-keyframes uptodown-play { 
+        0% { 
+            -webkit-transform: translate(0,-20px);  
+        } 
+        100% { 
+            -webkit-transform: translate(0,0);
+        }
+    }
+    @keyframes uptodown-play { 
+        0% { 
+            transform: translate(0,-20px);  
+        } 
+        100% { 
+            transform: translate(0,0);
+        }
+    }
+
+.line_btn09_1 {
+    position: absolute;
+    bottom: 7%;
+    margin-left: 18.5%;
+    width: 64%;
+}
+.line_btn10 {
+    position: absolute;
+    bottom: -1%;
+    left: %;
+    width: 100%;
+}
+.line_btn11 {
+    position: absolute;
+    top: 22%;
+    left: 27%;
+    width: 67%;
+}
+.line_btn12 {
+   position: absolute;
+    top: 28%;
+    left: 7%;
+    width: 26%;
+    z-index: 99;
+}
+.line_btn13 {
+    position: absolute;
+    top: 33.5%;
+    left: 27.5%;
+    width: 34%;
+    z-index: 9;
+}
+.line_btn14 {
+    position: absolute;
+    top: 31.5%;
+    left: 56%;
+    width: 26%;
+}
+.line_btn15 {
+   position: absolute;
+    bottom: 30%;
+    left: 0%;
+    width: 55%;
+    z-index: 99;
+}
+.line_btn16 {
+    position: absolute;
+    bottom: 26%;
+    left: 50.5%;
+    width: 22%;
+    z-index: 9;
+}
+.line_btn17 {
+    position: absolute;
+    bottom: 32%;
+    left: 65%;
+    width: 34%;
+    z-index: 0;
+}
+.line_btn18 {
+    position: absolute;
+    bottom: 10%;
+    left: 13%;
+    width: 75%;
+}
+.line_btn19 {
+    position: absolute;
+    top: 36%;
+    left: 15%;
+    width: 70%;
+
+}
+.line_btn20 {
+    position: absolute;
+    top: 46%;
+    left: 27%;
+    width: 55%;
+}
+.line_btn21 {
+    position: absolute;
+    bottom: 5%;
+    left: 10%;
+    width: 80%;
+}
+.line_btn22 {
+    position: absolute;
+    bottom: 9%;
+    left: 7%;
+    width: 37%;
+}
+.line_btn23 {
+    position: absolute;
+    bottom: 11%;
+    left: 50%;
+    width: 42%;
+}
+.line_btn24 {
+    position: absolute;
+    bottom: 36%;
+    left: 12%;
+    width: 41%;
+}
+.line_btn25 {
+    position: absolute;
+    bottom: 22%;
+    left: 47%;
+    width: 41%;
+}
+
+.line_btn26 {
+    position: absolute;
+    top: 12%;
+    left: 18%;
+    width: 65%;
+}
+
+.line_btn27 {
+    position: absolute;
+    bottom: 57.5%;
+    left: 57%;
+    width: 37%;
+}
+
+.line_btn28 {
+    position: absolute;
+    bottom: 53.8%;
+    left: 57%;
+    width: 37%;
+}
+.line_btn29 {
+    position: absolute;
+    bottom: 50%;
+    right: 14%;
+    width: 80%;
+}
+.line_btn30 {
+   position: absolute;
+    bottom: 32%;
+    right: 7%;
+    width: 84%;
+}
+
+.line_btn31 {
+    position: absolute;
+    bottom: 4%;
+    right: 11%;
+    width: 76%;
+}
+
+.line_btn32 {
+    position: absolute;
+    bottom: 1%;
+    left: 2%;
+    width: 92%;
+}
+
+.line_btn33 {
+    position: absolute;
+    top: 35.5%;
+    left: 6%;
+    width: 92%;
+}
+.line_btn34 {
+    position: absolute;
+    bottom: 8%;
+    left: 6%;
+    width: 92%;
+}
+.line_btn35 {
+    position: absolute;
+    top: 30%;
+    left: 2%;
+    width: 92%;
+}
+.line_btn36 {
+     position: absolute;
+    top: 0%;
+    left: 6%;
+    width: 92%;
+}
+.line_btn37 {
+    position: absolute;
+    bottom: 8%;
+    left: 10%;
+    width: 80%;
+}
+.line_btn38 {
+    position: absolute;
+    bottom: 8%;
+    left: 10%;
+    width: 80%;
+}
+.line_btn39 {
+    position: absolute;
+    bottom: 8%;
+    left: 10%;
+    width: 80%;
+}
+.line_btn40 {
+    position: absolute;
+    top: 45%;
+    left: 0%;
+    width: 54%;
+}
+.line_btn41 {
+    position: absolute;
+    top: 45%;
+    left: 0%;
+    width: 54%;
+}
+.line_btn40 {
+    position: absolute;
+    top: 45%;
+    left: 0%;
+    width: 54%;
+}
+.line_btn41 {
+    position: absolute;
+    top: 45%;
+    left: 48%;
+    width: 54%;
+}
+.line_btn42 {
+    position: absolute;
+    top: 69%;
+    left: 0%;
+    width: 54%;
+}
+.line_btn43 {
+    position: absolute;
+    top: 69%;
+    left: 48%;
+    width: 54%;
+}
+
+.line_btn44 {
+    position: absolute;
+    bottom: 1%;
+    left: 22%;
+    width: 59%;
+}
+.line_btn45 {
+    position: absolute;
+    top: 2%;
+    left: 0%;
+    width: 100%;
+}
+.line_btn46 {
+    position: absolute;
+    top: 6%;
+    left: 7%;
+    width: 85%;
+}
+.line_btn47 {
+    position: absolute;
+    bottom: -4%;
+    left: 4%;
+    width: 92%;
+    z-index: 9;
+}
+.line_btn48 {
+    position: absolute;
+    top: 14%;
+    left: 0%;
+    width: 100%;
+    z-index: 9;
+}
+.line_btn49 {
+    position: absolute;
+    top: 38%;
+    left: 55%;
+    width: 42%;
+    z-index: 9;
+}
+.line_btn50 {
+    position: absolute;
+    bottom: 2.5%;
+    right: 0%;
+    width: 100%;
+}
+.line_btn51 {
+    position: absolute;
+    bottom: 36%;
+    left: 4%;
+    width: 28%;
+}
+
+
+.line_btn52 {
+    position: absolute;
+    top: 7%;
+    left: 0%;
+    width: 100%;
+}
+.line_btn53 {
+    position: absolute;
+    top: 29%;
+    left: 50%;
+    width: 41%;
+}
+.line_btn54 {
+    position: absolute;
+    bottom: 1.5%;
+    right: 0%;
+    width: 100%;
+}
+.line_btn55 {
+    position: absolute;
+    bottom: 37.5%;
+    left: 50%;
+    width: 41%;
+}
+
+
+.line_btn56 {
+    position: absolute;
+    top: -1.5%;
+    left: 0%;
+    width: 100%;
+}
+.line_btn57 {
+    position: absolute;
+    top: 27%;
+    left: 2%;
+    width: 49%;
+}
+.line_btn58 {
+    position: absolute;
+    top: 2.5%;
+    right: 0%;
+    width: 100%;
+}
+.line_btn59 {
+    position: absolute;
+    bottom: 12.5%;
+    left: 48%;
+    width: 50%;
+}
+.line_btn60 {
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+}
+.line_btn61 {
+    position: absolute;
+    top: 21%;
+    left: 2.5%;
+    width: 26%;
+}
+.line_btn62 {
+    position: absolute;
+    left: 5%;
+    bottom: 6.5%;
+    width: 76%;
+}
+.line_btn63 {
+    position: absolute;
+    top: 1%;
+    right: 0%;
+    width: 95%;
+
+}
+.line_btn64 {
+    position: absolute;
+    top: 39.5%;
+    left: 0%;
+    width: 94%;
+}
+.line_btn65 {
+    position: absolute;
+    bottom: 4%;
+    right: 0%;
+    width: 95%;
+}
+.line_btn66 {
+    position: absolute;
+    bottom: 0%;
+}
+.line_btn67 {
+    position: absolute;
+    top: 6%;
+    right: 0%;
+    width: 95%;
+
+}
+.line_btn68 {
+    position: absolute;
+    bottom: 1%;
+    left: 0%;
+    width: 100%;
+
+}
+.line_btn69 {
+    position: absolute;
+    top: 6%;
+    width: 100%;
+}
+.line_btn70 {
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+}
+.line_btn71 {
+    position: absolute;
+    bottom: 40%;
+    right: 6%;
+    width: 58%;
+}
+.line_btn72 {
+    position: absolute;
+    bottom: 9%;
+    right: 9%;
+    width: 83%;
+}
+.line_btn73 {
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+}
+.line_btn74 {
+    position: absolute;
+    bottom: 45%;
+    right: 6%;
+    width: 57%;
+}
+.line_btn75 {
+    position: absolute;
+    bottom: 14%;
+    right: 9%;
+    width: 83%;
+}
+.line_btn76 {
+    position: absolute;
+    top: 7%;
+    right: 11%;
+    width: 77%;
+}
+.line_btn77 {
+    position: absolute;
+    top: 16%;
+    right: 14%;
+    width: 70%;
+}
+.line_btn78 {
+    position: absolute;
+    bottom: 0%;
+    right: 10%;
+    width: 80%;
+}
+
+.line_btn79 {
+    position: absolute;
+    bottom: 5%;
+    left: 10%;
+    width: 70.5%;
+}
+.line_btn80 {
+    position: absolute;
+    top: 3%;
+    right: 10%;
+    width: 80%;
+}
+
+.line_btn81 {
+    position: absolute;
+    top: 8%;
+    right: 3%;
+    width: 100%;
+}
+
+.line_btn82 {
+    position: absolute;
+    bottom: 18%;
+    right: 8%;
+    width: 84%;
+}
+.line_btn83 {
+    position: absolute;
+    top: 35%;
+    right: 11%;
+    width: 77%;
+}
+.line_btn84 {
+    position: absolute;
+    top: 38%;
+    right: 45%;
+    width: 28%;
+}
+.line_btn85 {
+    position: absolute;
+    top: 0%;
+    right: 5%;
+    width: 90%;
+}
+.line_btn86 {
+    position: absolute;
+    top: 2%;
+    left: 10%;
+    width: 100%;
+}
+.line_btn87 {
+    position: absolute;
+    bottom: 0%;
+    right: 9%;
+    width: 81%;
+}
+.line_btn88 {
+    position: absolute;
+    bottom: -74%;
+    left: 0%;
+    width: 100%;
+}
+
+.line_btn89 {
+    position: absolute;
+    bottom: 9%;
+    left: 7%;
+    width: 85%;
+}
+.line_btn90 {
+    position: absolute;
+    bottom: 9%;
+    left: 7%;
+    width: 82%;
+}
+.line_btn91 {
+    position: absolute;
+    top: 20%;
+    left: 17%;
+    width: 65%;
+}
+
+.line_btn92 {
+    position: absolute;
+    bottom: 19%;
+    left: 7%;
+    width: 85%;
+}
+.line_btn93 {
+    position: absolute;
+    top: 11%;
+    left: 9%;
+    width: 83%;
+}
+
+.line_btn94 {
+    position: absolute;
+    bottom: 19%;
+    left: 7%;
+    width: 85%;
+}
+.line_btn100 {
+    position: absolute;
+    top: -8%;
+    right: 9%;
+    width: 32%;
+    z-index: 999;
+}
+
+.btn-201 {
+    position: absolute;
+    top: -8%;
+    right: 9%;
+    width: 32%;
+    z-index: 999;
+}
+.btn-202 {
+    position: absolute;
+    top: -8%;
+    right: 9%;
+    width: 32%;
+    z-index: 999;
+}
+.btn-203 {
+    position: absolute;
+    top: -8%;
+    right: 9%;
+    width: 32%;
+    z-index: 999;
+}
+.btn-204 {
+    position: absolute;
+    top: -8%;
+    right: 9%;
+    width: 32%;
+    z-index: 999;
+}
+.btn-205 {
+    position: absolute;
+    top: -8%;
+    right: 9%;
+    width: 32%;
+    z-index: 999;
+}
+.btn-206 {
+    position: absolute;
+    top: -8%;
+    right: 9%;
+    width: 32%;
+    z-index: 999;
+}
+.btn-207 {
+    position: absolute;
+    top: -8%;
+    right: 9%;
+    width: 32%;
+    z-index: 999;
+}
+.btn-208 {
+    position: absolute;
+    top: -8%;
+    right: 9%;
+    width: 32%;
+    z-index: 999;
+}
+.btn-209 {
+    position: absolute;
+    top: -8%;
+    right: 9%;
+    width: 32%;
+    z-index: 999;
+}
+.btn-210 {
+    position: absolute;
+    top: -8%;
+    right: 9%;
+    width: 32%;
+    z-index: 999;
+}
+
+.line_btn-video {
+   position: absolute;
+bottom: -2%;
+left: 10%;
+width: 80%;
+height: 18%;
+}
+
+.line_btn999 {
+    position: absolute;
+    bottom: 4%;
+    right: 7%;
+    width: 85%;
+}
+
+.bounce {
+    animation: bounce 1s infinite;
+}
+
+@keyframes bounce {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.btn4-3-1 {
+    width: 48%;
+    top: 11%;
+    left: 9%;
+}
+
+.btn4-3-2 {
+    width: 38%;
+    top: 25%;
+    left: 8%;
+    animation-delay: .5s;
+}
+
+.btn4-3-3 {
+    width: 50%;
+    top: 50%;
+    left: 11%;
+    animation-delay: 1s;
+}
+
+.videobox {
+    position: absolute;
+    width: 100%;
+    height: 62%;
+    top: 18%;
+}
+
+.videobox iframe {
+    width: 100%;
+    height: 100%;
+}
+
+.offer_btn3 {
+    width: 60%;
+    top: 71%;
+    left: 20%;
+}
+
+.offer_btn4 {
+    width: 60%;
+    top: 67%;
+    left: 20%;
+}
+
+.offer_btn5 {
+    width: 60%;
+    top: 70%;
+    left: 20%;
+}
+
+.offer_btn6 {
+    width: 60%;
+    top: 61%;
+    left: 20%;
+}
+
+#cta {
+    display: none;
+}
+
+.cta--pc {
+    position: fixed;
+    bottom: 2%;
+    right: 2%;
+}
+
+.cta--mb {
+    display: none;
+}
+
+
+
+@media (max-width:960px) {
+    .nav_list {
+        margin-right: .5em;
+    }
+    .nav_item {
+        padding: 0px 0.75rem;
+        font-size: 1.5rem;
+    }
+    .logo {
+        width: 80%;
+    }
+}
+
+@media (max-width:768px) {
+    nav {
+        display: none;
+    }
+    #hamburger {
+        display: block;
+    }
+    .cta--pc {
+        display: none;
+    }
+    .cta--mb {
+        display: block;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+    }
+}
+
+@media (max-width:576px) {
+    #splash_logo {
+        width: 90%;
+    }
+}

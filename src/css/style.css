@@ -1,0 +1,596 @@
+head, body{
+	padding: 0;
+	margin: 0;
+}
+
+img{
+	display: block;
+	width: 100%;
+}
+
+.full-width{
+	width: 100%;
+	background-size: cover;
+	background-position: center;
+	text-align: center;
+	margin: 0 auto;
+	max-width: 1920px;
+}
+
+.half-width{
+	width: 50% !important;
+	float: left;
+}
+
+.content, .full-width>div{
+	max-width: 1000px;
+	width: 100%;
+	margin: 0 auto;
+}
+
+.ab_center{
+	margin: auto;
+	right: 0;
+	left: 0;
+}
+
+
+
+.gif, .offer{position: relative;}
+
+.gif-1{
+	position: absolute;
+	width: 100%;
+	bottom: 1%;	
+}
+
+/*offer start*/	
+
+
+.btn1{
+	position: absolute;
+	width: 63%;
+	bottom: 12.5%;
+}
+
+.btn1:hover{
+	bottom: 12.3%;
+	opacity: .9;
+}
+
+.btn2{
+	position: absolute;
+	width: 63%;
+	bottom: 4%;
+}
+
+.btn2:hover{
+	bottom: 3.7%;
+	opacity: .9;
+}
+
+.btn3{
+	position: absolute;
+	width: 63%;
+	bottom: 6.5%;
+}
+
+.btn3:hover{
+	bottom: 6.2%;
+	opacity: .9;
+}
+
+.btn4{
+	position: absolute;
+	width: 65%;
+	bottom: 22%;
+}
+
+.btn4:hover{
+	bottom: 21.7%;
+	opacity: .9;
+}
+
+
+
+
+/*-------- menu bar --------*/
+
+.header{
+	height: 70px;
+	width: 100%;
+	top: 0;
+	background-color: #ffa8a8;
+	text-align: center;
+	position: fixed;
+	z-index: 999;
+	letter-spacing: 2.5px;
+	font-family: 'Noto Sans CJK TC Regular', Arial;
+	font-weight:bold;
+    box-shadow: 0 0 15px rgba(0,0,0,.5);
+	
+	
+}
+
+
+
+.logo{
+	float: left;
+	display: block;
+	width: 55px;	
+	margin: 15px auto;
+	padding-right: 22em;
+	padding-left: 1em;
+	
+}
+
+.menu{
+	float: left;
+	display: block;
+	}
+
+
+.menu li{
+	float:left;
+	display: block;
+}
+.menu li a{
+	display: block;
+	color: white;
+	text-decoration: none;
+	padding-right: 4em;
+	padding-top: 1em;
+}
+
+
+
+/*在PC上隱藏漢堡選單*/
+.showmenu{
+	display: none;
+}
+
+
+
+
+
+
+@media (max-width: 984px) {
+	
+	.wapper{
+	padding-top: 55px;	
+}
+	
+	.header{
+		height: 55px;
+	}
+	
+	.logo{
+		width: 50px;
+		margin: 10px auto;
+		padding-left: 12px;	
+		padding-right: .1em;
+	}
+
+	.item{
+		padding-right: 15px;
+	}
+	
+	.menu{
+		/*隱藏選單開始*/
+		max-height: 0;
+		overflow: hidden;
+		/*隱藏選單結束*/
+		/*漸變效果*/
+    	transition: max-height 1.2s;
+    	margin-top: -15px;
+		margin-left: -40px;
+    	/*絕對定位疊在網頁上*/
+    	position: absolute;
+    	/*權重*/
+    	z-index: 100;
+    	/*header 80px+1px boder 線條*/
+    	top: 70px;
+    	/* left:0 right:0表示滿版 */
+    	left: 0;
+   		right: 0;
+    	background: #FFF5EA;
+		opacity: .9;
+		
+	}
+	
+	.menu li{
+		float: none;
+		text-align: center;		
+		line-height: 45px;
+		border-bottom: 1px solid #D1B99D;
+		
+	}
+	.menu li a{
+		padding-left: 6em;
+		padding-top: .5em;
+    	transition: all 0.3s;
+		color: #f3908e;
+  	}
+	.menu li a:hover{		
+    	background: #FAB161;
+    	color: #fff;
+  	}
+	.showmenu{
+    	display: block;
+    	float: right;
+    	margin: .8em;
+  	}
+			/*jQuery點擊後動態在 body 加上 class */
+			.menu-show .menu{
+				max-height: 800px;
+			}
+	
+
+	/*------------ 漢堡圖示+動態樣式設定 start ------------*/
+
+		.hamburger { 
+		font-size: 25px; 
+		display: inline-block; 
+		width: 1em; 
+		height: .85em; 
+		padding: 0; 
+		cursor: pointer; 
+		transition: transform .2s ease-in-out; 
+		vertical-align: middle; 
+		border: 0 none; 
+		background: transparent; } 
+		/** + Button height fix for Firefox */ 
+
+		.hamburger::-moz-focus-inner { 
+			padding: 0; 
+			border: 0 none; 
+
+		} /** + Focus fix for Chrome */ 
+		.hamburger:focus { 
+			outline: 0; 
+		}
+
+		.hamburger:before, 
+		.hamburger:after { 
+			content: ""; 
+		} 
+		.hamburger:before, 
+		.hamburger .icon, 
+		.hamburger:after { 
+			display: block; 
+			width: 100%; 
+			height: .15em; 
+			margin: 0 0 .25em; 
+			transition: transform .2s ease-in-out; 
+			border-radius: .05em; 
+			background: #fff; 
+		} 
+		/** + Styles for the active `.hamburger` icon */ 
+		.hamburger.active:before, 
+		.hamburger.active .icon, 
+		.hamburger.active:after { 
+			background: #fff; 
+		}
+
+		/** + CLOSE/CANCEL/CROSS */ 
+		.hamburger.hamburger-cancel.active .icon { 
+			transform: scale(0); 
+		} 
+		.hamburger.hamburger-cancel.active:before { 
+			transform: translateY(.4em) rotate(135deg); 
+		} 
+		.hamburger.hamburger-cancel.active:after { 
+			transform: translateY(-.4em) rotate(-135deg); 
+		}	
+	/*------------ 漢堡圖示+動態樣式設定 end ------------*/	
+
+	
+}
+
+
+
+
+
+.collapsible {
+	cursor: pointer;
+}
+
+.modal {
+	max-height: 0;
+	overflow: hidden;
+    transition: max-height 0.2s ease-out;
+}
+
+
+
+/*QA start*/
+
+.QA{
+	display: block;
+}
+
+
+.btn_close {
+	display: none;
+}
+
+
+ol, ul {
+	
+	list-style: none;
+	margin: 5px;
+	padding: 0px;
+	
+}
+
+
+p {
+	margin: 0px;	
+}
+
+#reasone-hide01, #reasone-hide02, #reasone-hide03, #reasone-hide04, #reasone-hide05{
+	display: none;
+}
+
+
+
+
+/*background start*/
+.section1{	background-image: url('../img/section_01_bg.jpg');}
+.section2{	background-image: url('../img/section_02_bg.jpg');background-attachment:fixed; }
+.section3{	background-image: url('../img/section_03_bg.jpg');}
+.section4{	background-image: url('../img/section_04_bg.jpg');}
+
+
+
+/*輪播設定 start*/
+.swiper-container {
+	width: 100% !important;
+	height: 100% !important;
+}
+.swiper-slide {
+	background-position: center;
+	background-size: cover;
+}
+
+.swiper-pagination-bullet {
+	width: 13px !important;
+	height: 13px !important;
+	margin: 0 15px!important;
+}
+:root {
+	--swiper-navigation-size: 60px !important;/*紅字是因為前面有--*/
+	/*--swiper-navigation-color: var(--swiper-theme-color);	  */
+}
+.swiper-button-next{
+    right: 2% !important;
+}
+.swiper-button-prev{
+	left: 2% !important;
+}
+/*輪播設定   end*/
+
+
+
+.buy {
+    overflow: hidden;
+}
+
+/* ボタンの光沢 */
+.is-reflection a {
+    overflow: hidden;
+}
+.is-reflection a:after {
+    -moz-animation: is-reflection 4s ease-in-out infinite;
+    -moz-transform: rotate(45deg);
+    -ms-animation: is-reflection 4s ease-in-out infinite;
+    -ms-transform: rotate(45deg);
+    -o-animation: is-reflection 4s ease-in-out infinite;
+    -o-transform: rotate(45deg);
+    -webkit-animation: is-reflection 4s ease-in-out infinite;
+    -webkit-transform: rotate(45deg);
+    animation: is-reflection 4s ease-in-out infinite;
+    background-color: #fff;
+    content: " ";
+    height: 100%;
+    left: 0;
+    opacity: 0;
+    position: absolute;
+    top: -180px;
+    transform: rotate(45deg);
+	width: 30px;
+	border-radius: 30%;
+}
+/* アニメーションを遅延させる */
+.is-reflection + .is-reflection a:after {
+    -webkit-animation-delay: .3s;
+    animation-delay: .3s;
+}
+@keyframes is-reflection {
+    0% { -webkit-transform: scale(0) rotate(45deg); transform: scale(0) rotate(45deg); opacity: 0; }
+    80% { -webkit-transform: scale(0) rotate(45deg); transform: scale(0) rotate(45deg); opacity: 0.5; }
+    81% { -webkit-transform: scale(4) rotate(45deg); transform: scale(4) rotate(45deg); opacity: 1; }
+    100% { -webkit-transform: scale(50) rotate(45deg); transform: scale(50) rotate(45deg); opacity: 0; }
+}
+@-webkit-keyframes is-reflection {
+    0% { -webkit-transform: scale(0) rotate(45deg); opacity: 0; }
+    80% { -webkit-transform: scale(0) rotate(45deg); opacity: 0.5; }
+    81% { -webkit-transform: scale(4) rotate(45deg); opacity: 1; }
+    100% { -webkit-transform: scale(50) rotate(45deg); opacity: 0; }
+}
+
+
+
+@media screen and (max-width: 1250px){
+	:root {
+	--swiper-navigation-size: 40px !important;/*紅字是因為前面有--*/
+	/*--swiper-navigation-color: var(--swiper-theme-color);	  */
+	}
+	.swiper-button-next{
+		right: 3% !important;
+	}
+	.swiper-button-prev{
+		left: 3% !important;
+	}
+}
+@media screen and (max-width: 1000px){
+	
+	.swiper-button-next,.swiper-button-prev{
+		width:calc(var(--swiper-navigation-size)/ 44 * 27)!important;
+	}
+	:root {
+		--swiper-navigation-size: 33px !important;/*紅字是因為前面有--*/
+		/*--swiper-navigation-color: var(--swiper-theme-color);	  */
+	}
+	.swiper-pagination-bullet {
+		width: 12px !important;
+		height: 12px !important;
+		margin: 0 15px!important;
+	}
+	.swiper-container .swiper-wrapper .swiper-slide{
+		width: 92% !important;
+		padding: 0 4% 0 4%;
+	}
+}
+
+
+
+.wapper{
+	padding-top: 65px;
+}
+
+/**nav bar START**/
+
+nav {
+	position: fixed;
+    top: 0;
+    width: 100%;
+    height: 4em;
+    background-color: #ffffff;
+    box-shadow: 0px -3px 20px;
+    -webkit-box-shadow: 0px 0px 20px rgba(50, 17, 0, 0.45);
+    padding-bottom: 8px;
+}
+
+nav ul {
+    margin: 0 auto;
+    padding: 0;
+    width: 70%;
+}
+
+nav li {
+    list-style: none;
+    float: left;
+    width: 24.7%;
+    text-align: center;
+    font-size: 2.2em;
+    color: black;
+    font-family: 'Noto Serif CJK TC', 'Noto Sans CJK TC Regular';
+    font-weight: normal;
+    border-left: black solid 3px;
+    cursor: pointer;
+    margin: 10px 0 10px 0;
+}
+
+nav li:last-child {
+   color: crimson;
+}
+
+nav li:hover {
+    color: hsla(240, 0%, 50%, 0.8);
+    transition: .2s;
+    -moz-transition: .2s;
+    -webkit-transition: .2s;
+    -o-transition: .2s;
+}
+
+nav li:first-child {
+    border-left: none;
+}
+
+
+
+
+
+@media screen and (max-width: 1600px) {
+
+    nav {
+        height: 3.7em;
+    }
+    nav li {
+        font-size: 2em;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+	.wapper{
+		padding-top: 60px;
+	}
+    nav {
+        height: 3.3em;
+    }
+    nav ul {
+        width: 100%;
+    }
+    nav li {
+        font-size: 1.7em;
+    }
+}
+
+@media screen and (max-width: 770px) {
+	.wapper{
+		padding-top: 50px;
+	}
+    nav {
+        padding-bottom: 5px;
+        height: 2.8em;
+    }
+    nav li {
+        width: 24.5%;
+        font-size: 1.3em;
+        border-left: black solid 2px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+	.wapper{
+		padding-top: 58px;
+	}
+    nav {
+        padding-bottom: 3px;
+        height: 3.5em;
+    }
+    nav li {
+        width: 24.3%;
+        font-size: 1.1em;
+        margin: 17px 0 17px 0;
+    }
+}
+
+@media screen and (max-width: 350px) {
+	.wapper{
+		padding-top: 43px;
+	}
+	nav {
+        padding-bottom: 3px;
+        height: 2.5em;
+    }
+    nav li {
+       width: 24%;
+		font-size: 0.8em;
+		margin: 9px 0 9px 0;
+    }
+}
+
+@media screen and (max-width: 250px) {
+
+
+    nav li {
+        width: 24%;
+		font-size: 0.8em;
+		margin: 9px 0 9px 0;
+    }
+}
+	
+	
+	
