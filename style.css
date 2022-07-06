@@ -124,6 +124,17 @@ nav {
 }
 
 
+.loading-all {
+  width: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+  display: grid;
+  place-items: center;
+  background-color: #EBC65F;
+  z-index: 99999000;
+  position: fixed;
+  top: 0%;
+}
 /*漢堡選單*/
 
 #hamburger {
